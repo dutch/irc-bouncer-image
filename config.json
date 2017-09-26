@@ -1,0 +1,19 @@
+{
+  "builders": [
+    {
+      "type": "digitalocean",
+      "api_token": "",
+      "image": "centos-7-x64",
+      "region": "sfo2",
+      "size": "512mb",
+      "snapshot_name": "irc-bouncer-image-v1",
+      "ssh_username": "root"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "src/provision.sh"
+    }
+  ]
+}
