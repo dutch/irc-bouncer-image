@@ -11,3 +11,5 @@ before_install:
 script:
   - ./packer validate config.json
   - ./packer build config.json
+  - git config core.sshCommand "ssh -F ssh_config"
+  - bumpversion number
